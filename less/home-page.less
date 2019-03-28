@@ -1,6 +1,13 @@
 .home {
   margin: 0 auto;
 
+
+  .full-border {
+    border-bottom: 2px dashed @navigation-border;
+    border-width: max-width;
+  }
+
+
   .fun-bus-img {
     // max-width: 10%;
     // height: auto;
@@ -11,6 +18,8 @@
     justify-content: center;
     // flex-direction: column;
     }
+
+  
     
 
 
@@ -20,7 +29,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width:500px){
+    @media @mobile {
       flex-direction: column;
     }
     
@@ -28,7 +37,7 @@
       width: 48%;
       padding-right: 1%;
     
-      @media (max-width:500px) {
+      @media @mobile {
         width: 98%;
       }
     }
@@ -36,16 +45,22 @@
     .img-content {
       width: 48%;
       padding-left: 1%;
+      // margin: 0 0 0 0;
 
-      @media (max-width:500px) {
+      @media @mobile {
         // need to fix, not working
-        // width:auto;
-        padding: 0% 0% 0% 0%;
-        margin: 0px 0px 0px 0px;
+        width:100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        // width:100%;
       }
 
       img {
         border-radius: 10px;
+        width:100%;
       }
     }
   }
@@ -54,7 +69,7 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
-    @media (max-width:500px) {
+    @media @mobile {
       flex-direction: column-reverse;
     }
 
@@ -73,7 +88,7 @@
     width: 75%;
     margin: 0 auto 30px;
 
-    @media (max-width:500px) {
+    @media @mobile {
       margin: 0 0 0 0;
       padding: 0px 0px 0px 0px;
       width: 90%;
@@ -81,6 +96,7 @@
 
     img {
       border-radius: 10px;
+      width: 100%;
     }
 
   }
@@ -93,7 +109,7 @@
     justify-content: space-between;
     padding-top:10px;
 
-    @media (max-width:500px){
+    @media @mobile {
       // color:blue;
       flex-direction: column;
       // align-content: center;
@@ -127,18 +143,18 @@
 
 
   .btn {
-    background-color:@eastern-blue;
-    color: @white;
-    padding: 10px 20px 10px 10px;
-    width: 80%;
-    font-size: 2rem;
-    text-align:center;
-    border-radius: 10px;
+    .parametric-button(@eastern-blue, @white);
 
-    @media (max-width:500px) {
+    @media @mobile {
       width: 90%;
+      // color: pink;
     }
   }
+
+  .btn:hover {
+    .parametric-animation(@shark);
+  }
+
 
 
 }// home
