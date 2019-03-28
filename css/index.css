@@ -134,6 +134,12 @@ table {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -173,6 +179,15 @@ header {
   align-items: center;
   padding: 20px 0px 20px 0px;
   border-bottom: 2px dashed #C0C0C0;
+  border-width: max-width;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    padding-bottom: 10px;
+  }
 }
 header nav a {
   text-decoration: none;
@@ -205,13 +220,29 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 98%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    padding: 0% 0% 0% 0%;
+    margin: 0px 0px 0px 0px;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -219,6 +250,11 @@ header nav a {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -232,18 +268,39 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
+    width: 90%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
 .home .content-pick {
   padding-top: 30px;
+  margin-top: 10px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .home .content-pick .destination {
+  padding-top: 10px;
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 90%;
+  }
 }
 .home .intro-section {
   padding: 20px 0px 10px 0px;
@@ -257,4 +314,9 @@ header nav a {
   font-size: 2rem;
   text-align: center;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .btn {
+    width: 90%;
+  }
 }

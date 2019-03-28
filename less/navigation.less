@@ -11,10 +11,21 @@ header {
     align-items: center;
     padding: 20px 0px 20px 0px;
     border-bottom: 2px dashed @navigation-border;
+    border-width: max-width;
   
+    @media (max-width:500px) {
+        h1 {
+            padding-bottom: 10px;
+        }
+        flex-direction:column;
+        // color:red;
+    }
 }
 
 header nav {
+    @media (max-width:500px) {
+        
+    }       
 
 }
 

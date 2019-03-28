@@ -19,18 +19,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 
-   
+    @media (max-width:500px){
+      flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+    
+      @media (max-width:500px) {
+        width: 98%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media (max-width:500px) {
+        // need to fix, not working
+        // width:auto;
+        padding: 0% 0% 0% 0%;
+        margin: 0px 0px 0px 0px;
+      }
 
       img {
         border-radius: 10px;
@@ -41,6 +53,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media (max-width:500px) {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -57,25 +73,46 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media (max-width:500px) {
+      margin: 0 0 0 0;
+      padding: 0px 0px 0px 0px;
+      width: 90%;
+    }
+
     img {
       border-radius: 10px;
     }
+
   }
 
   .content-pick {
     padding-top: 30px;
+    margin-top: 10px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    padding-top:10px;
+
+    @media (max-width:500px){
+      // color:blue;
+      flex-direction: column;
+      // align-content: center;
+      align-items: center;
+    }
 
     .destination {
+      padding-top: 10px;
       width: 30%;
       margin-bottom: 30px;
+      // color:blue;
+
+      @media (max-width:500px) {
+        width: 90%;
+        
+      }
+
     }
   }
-
-  // new CSS from Tim Rooney
-  // .container {
 
     
 
@@ -97,6 +134,10 @@
     font-size: 2rem;
     text-align:center;
     border-radius: 10px;
+
+    @media (max-width:500px) {
+      width: 90%;
+    }
   }
 
 
