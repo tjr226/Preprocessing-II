@@ -2,8 +2,25 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width:500px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  // display: flex;
+
+  // .fun-bus-img {
+    // border: red solid 1px;
+  // }
+}
+
 html {
   font-size: 62.5%;
+  // color: red;
 }
 
 html, body {
@@ -32,15 +49,4 @@ p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
 }

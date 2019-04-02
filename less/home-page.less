@@ -1,4 +1,27 @@
 .home {
+  margin: 0 auto;
+
+
+  .full-border {
+    border-bottom: 2px dashed @navigation-border;
+    border-width: max-width;
+  }
+
+
+  .fun-bus-img {
+    // max-width: 10%;
+    // height: auto;
+    display: flex;
+    width: 100%;
+    // border: 3px red solid;
+    // text-align: center;
+    justify-content: center;
+    // flex-direction: column;
+    }
+
+  
+    
+
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +29,38 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+    
+      @media @mobile {
+        width: 98%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      // margin: 0 0 0 0;
+
+      @media @mobile {
+        // need to fix, not working
+        width:100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        // width:100%;
+      }
 
       img {
         border-radius: 10px;
+        width:100%;
       }
     }
   }
@@ -26,6 +68,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,20 +88,74 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      margin: 0 0 0 0;
+      padding: 0px 0px 0px 0px;
+      width: 90%;
+    }
+
     img {
       border-radius: 10px;
+      width: 100%;
     }
+
   }
 
   .content-pick {
     padding-top: 30px;
+    margin-top: 10px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    padding-top:10px;
+
+    @media @mobile {
+      // color:blue;
+      flex-direction: column;
+      // align-content: center;
+      align-items: center;
+    }
 
     .destination {
+      padding-top: 10px;
       width: 30%;
       margin-bottom: 30px;
+      // color:blue;
+
+      @media (max-width:500px) {
+        width: 90%;
+        
+      }
+
     }
   }
+
+    
+
+  // }
+
+  .intro-section {
+    padding: 20px 0px 10px 0px;
+    border-bottom: 2px dashed @navigation-border;
+  
+  }
+
+
+
+  .btn {
+    .parametric-button(@eastern-blue, @white);
+
+    @media @mobile {
+      width: 90%;
+      // color: pink;
+    }
+  }
+
+  .btn:hover {
+    .parametric-animation(@shark);
+  }
+
+
+
 }// home
+

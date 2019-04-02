@@ -12,3 +12,38 @@
 @shark: #212529;
 @eastern-blue: #17A2B8;
 @sandy-beach: #FFEBCD;
+
+@mobile: ~"(max-width: 500px)";
+
+.parametric-button(@background-color, @color) {
+    // background-color:@eastern-blue;
+    background-color:@background-color;
+    // color: @white;
+    color:@color;
+    padding: 10px 20px 10px 10px;
+    width: 80%;
+    font-size: 2rem;
+    text-align:center;
+    border-radius: 10px;
+
+            /* Firefox */
+    -moz-transition: all .3s ease-in;
+    /* WebKit */
+    -webkit-transition: all .3s ease-in;
+    /* Opera */
+    -o-transition: all .3s ease-in;
+    /* Standard */
+    transition: all .3s ease-in;
+}
+
+// comment to refresh
+
+.parametric-animation(@new-background-color) {
+    background-color:@new-background-color;
+}
+
+// .custom-layout(@justify, @align){
+// 	display: flex;
+// 	justify-content: @justify;
+// 	align-items: @align;
+// }
